@@ -1,7 +1,7 @@
 {
 	"name": "mdmsoft/yii2-ar-extended",
 	"description": "Activerecord extended field",
-	"keywords": ["yii2"," extension"," extended"," behavior"],
+	"keywords": ["yii2", "extension", "extended", "behavior"],
 	"license": "BSD-3-Clause",
 	"type": "yii2-extension",
 	"license": "BSD-3-Clause",
