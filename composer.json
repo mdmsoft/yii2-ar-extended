@@ -1,0 +1,24 @@
+{
+	"name": "mdmsoft/yii2-ar-extended",
+	"description": "Activerecord extended field",
+	"keywords": ["yii2"," extension"," extended"," behavior"],
+	"license": "BSD-3-Clause",
+	"type": "yii2-extension",
+	"license": "BSD-3-Clause",
+	"authors": [
+		{
+			"name": "Misbahul D Munir",
+			"email": "misbahuldmunir@gmail.com"
+		}
+	],
+	"require": {
+		"yiisoft/yii2": "*",
+		"yiisoft/yii2-mongodb"
+	},
+	"autoload": {
+		"psr-4": { "mdm\\extended\\": "" }
+	},
+	"extra": {
+		"bootstrap": "mdm\\extended\\Bootstrap"
+	}
+}
