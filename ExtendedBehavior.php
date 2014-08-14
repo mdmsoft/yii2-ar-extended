@@ -37,6 +37,7 @@ class ExtendedBehavior extends \yii\base\Behavior
     public function events()
     {
         return[
+            BaseActiveRecord::EVENT_AFTER_FIND => 'loadRelation',
             BaseActiveRecord::EVENT_AFTER_INSERT => 'afterSave',
             BaseActiveRecord::EVENT_AFTER_UPDATE => 'afterSave',
             BaseActiveRecord::EVENT_AFTER_DELETE => 'afterDelete'
@@ -88,7 +89,7 @@ class ExtendedBehavior extends \yii\base\Behavior
         }
     }
 
-    private function loadRelation()
+    public function loadRelation()
     {
         if ($this->relationKey === null) {
             $this->relationKey = [];
@@ -124,7 +125,7 @@ class ExtendedBehavior extends \yii\base\Behavior
         }
         $this->_relation->save();
     }
-    
+
     public function afterDelete($event)
     {
         $this->_relation->delete();
